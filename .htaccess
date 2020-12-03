@@ -23,7 +23,7 @@ AddOutputFilterByType DEFLATE application/x-javascript
 ServerSignature Off
 
 ##### PHP config values #####
-php_value memory_limit 256M
+php_value memory_limit 512M
 php_value max_input_vars 1000
-php_value max_execution_time 30
-php_value max_input_time 30
+php_value max_execution_time 300
+php_value max_input_time 300
