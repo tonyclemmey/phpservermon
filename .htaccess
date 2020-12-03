@@ -1,4 +1,28 @@
+##### IPs #####
+# deny from all
+# Guru Server IP
+allow from 85.92.72.18
+# Tony Home IP
+allow from 77.96.99.210
+allow from 77.100.230.146
+# TCD VPN US
+allow from 172.105.157.252
+# Crons - cron-job.org/en/faq/
+allom from 195.201.26.157
+allow from 116.203.134.67
+allow from 116.203.129.16
+
+##### Directory browsing #####
 Options -Indexes
+
+##### Disable server signature #####
+ServerSignature Off
+
+##### PHP config values #####
+php_value memory_limit 512M
+php_value max_input_vars 1000
+php_value max_execution_time 300
+php_value max_input_time 300
 
 <IfModule mod_expires.c>
  <FilesMatch "\.(js|jpg|jpeg|gif|png|css)$">
@@ -18,12 +42,3 @@ AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
-
-##### Disable server signature #####
-ServerSignature Off
-
-##### PHP config values #####
-php_value memory_limit 512M
-php_value max_input_vars 1000
-php_value max_execution_time 300
-php_value max_input_time 300
